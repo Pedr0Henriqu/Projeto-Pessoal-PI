@@ -1,7 +1,3 @@
-body{
-    margin: 0;
-    background-image:linear-gradient(#cbb4a9, #706a62) ;
-}
 
 .imagem{
     background-image:linear-gradient(to left, rgb(0, 0, 0, 0.1),rgba(161, 160, 199, 0.1)), 
@@ -116,13 +112,13 @@ h1{
     margin: 0;
 }
 
-.frase{
+.banner .frase{
     text-align: start;
     width: 40%;
     height: auto;
 }
 
-.frase p{
+.banner .frase p{
     font-size: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 20px;
@@ -153,13 +149,57 @@ button:hover{
 
 }
 
+/* Inicio Banner 2 */
+
 .banner2{
     height: 500px;
 }
 
 .banner2 .container{
-    border: 1px solid red;
     width: 80%;
     height: 100%;
     margin:auto;
+    margin-top: 100px;
+}
+
+.card{
+    display: flex;
+    height:100%;
+}
+
+.banner2 .card1{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+}
+
+
+.banner2 .frase{
+    margin-left: 80px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
+.banner2 .card2{
+    width: 40%;
+}
+
+.banner2 p{
+    padding: 0%;
+}
+
+.banner2 img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.banner3{
+    height: 500px;
 }
