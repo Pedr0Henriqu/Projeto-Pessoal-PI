@@ -1,7 +1,14 @@
-
 body{
     margin: 0;
     background-color:#745b54;
+}
+
+.imagem{
+    background-image:linear-gradient(to left, rgb(0, 0, 0, 0.1),rgba(161, 160, 199, 0.1)), 
+    url(../Imagens/teste2.jpg);
+    background-position-x: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*Header*/
