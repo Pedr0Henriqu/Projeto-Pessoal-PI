@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="../css global/css global.css">
     <link rel="icon" href="../Imagens/title skate.png">
+    <script src="../js/funcoes.js"></script>
+    <script src="login.js"></script>
     <title>Login</title>
 </head>
 <body>
         <!--Header-->
             <div class="header">
                 <div class="container">
-                    <div onclick="" class="logo">
+                    <div onclick="home()" class="logo">
                         <img src="../Imagens/icone skate.png"> 
                         <span>SKATEBOARD</span>
                     </div>
@@ -23,9 +25,6 @@
                         <li><a href="">Sobre</a></li>
                     </ul>
     
-                    <ul onclick="login()" class="navbar2">
-                        <li>Login</li>
-                    </ul>
                 </div>
             </div>
 
@@ -56,13 +55,20 @@
 
                                 <!-- Senha -->
                                 <p>Senha:</p>
-                                <input id="input_senha">
+                                <input id="input_senha" type="text">
 
                                 <div class="botao">
                                     <button>Login</button>
                                 </div>
 
+                                <div class="link">
+                                    <span>
+                                        Não Possui uma conta? <a href="../Cadastro/cadastro.html">Cadastre-se </a>
+                                    </span>
+                                </div>
+
                             </div>
+
 
                         </div>
 
