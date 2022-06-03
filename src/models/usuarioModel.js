@@ -12,7 +12,7 @@ function listar() {
 function entrar(email, senha) {
     console.log("ACESSEI O usuario_aquatec MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucao = `
-        SELECT * FROM usuario_aquatec WHERE email = '${email}' AND senha = '${senha}';
+    SELECT * FROM usuario WHERE email = '${email}' AND senha = aes_encrypt('${senha}' , 'luanOliveira');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -25,8 +25,9 @@ function cadastrar(nome, email, senha) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO usuario_aquatec (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');
-    `;
+            insert into usuario (nome,email,senha) values
+            ('${nome}','${email}', aes_encrypt('${senha}', 'luanOliveira'));
+            `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }

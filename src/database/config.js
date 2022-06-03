@@ -2,27 +2,27 @@ var mysql = require("mysql2");
 var sql = require('mssql');
 
 // CONEXÃO DO SQL SERVER - AZURE (NUVEM)
-var sqlServerConfig = {
-    user: "admin-acquatec-6",
-    password: "#Gfgrupo6",
-    database: "acquatec",
-    server: "svr-acquatec-grupo6.database.windows.net",
-    pool: {
-        max: 10,
-        min: 0,
-        idleTimeoutMillis: 30000
-    },
-    options: {
-        encrypt: true, // for azure
-    }
-}
+// var sqlServerConfig = {
+//     user: "admin-acquatec-6",
+//     password: "#Gfgrupo6",
+//     database: "acquatec",
+//     server: "svr-acquatec-grupo6.database.windows.net",
+//     pool: {
+//         max: 10,
+//         min: 0,
+//         idleTimeoutMillis: 30000
+//     },
+//     options: {
+//         encrypt: true, // for azure
+//     }
+// }
 
 // CONEXÃO DO MYSQL WORKBENCH (LOCAL)
 var mySqlConfig = {
     host: "localhost",
-    user: "SEU_USUARIO",
-    database: "DATABASE_UTILIZADO",
-    password: "SUA_SENHA",
+    user: "aluno",
+    database: "skateboarding",
+    password: "sptech",
 };
 
 function executar(instrucao) {
