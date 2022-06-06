@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grafico.css">
     <link rel="stylesheet" href="../css global/css global.css">
-    <link rel="stylesheet" href="minhaconta.css">
     <link rel="icon" href="../Imagens/title skate.png">
-    <script src="minhaconta.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="grafico.js"></script>
     <script src="../js/funcoes.js"></script>
-    <title>Meu perfil</title>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Estatística</title>
 </head>
 <body>
-
-    <!-- Header -->
-    <div class="conteudo">
+       <!-- Header -->
+       <div class="conteudo">
         <div class="header"> 
                 <div class="foto">
                     <img src="../Imagens/usuario.png" alt="">
@@ -26,8 +28,8 @@
 
 
                 <div class="navbar">
-                    <li><a href="minhaconta.html">Perfil</a></li>
-                    <li><a href="../Gráfico/grafico.html">Estatística</a></li>
+                    <li><a href="../Minha conta/minhaconta.html">Perfil</a></li>
+                    <li><a href="">Estatística</a></li>
                 </div>
 
                 <div class="sair" onclick="limparSessao()">
@@ -40,10 +42,10 @@
             <div class="banner">
                 <div class="container">
                     <div class="card">
-                        
+
                         <div onclick="" class="logo">
-                            <img src="../Imagens/icone skate.png"> 
-                            <span>SKATEBOARD</span>
+                          <img src="../Imagens/icone skate.png"> 
+                          <span>SKATEBOARD</span>
                         </div>
 
                         <div id="titulo">
@@ -51,8 +53,13 @@
                             <h3>Veja nosso rank de skatistas profissionais mais votados</h3>
                         </div>
 
-                        <div class="votacao">
+                        <div class="grafico">
+                            <div class="retrato">
+                                <div>
+                                    <canvas id="div_grafico"></canvas>
+                                  </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -65,5 +72,39 @@
     var usuario = sessionStorage.getItem('NOME_USUARIO')
     username.innerHTML = usuario[0].toLocaleUpperCase() + usuario.substr(1); // esta formatado para a primeira letra ser Maiuscula
     titulo.innerHTML = `<h1>Bem vindo(a) ${ usuario[0].toLocaleUpperCase() + usuario.substr(1)}</h1>
-    <h3>Vote no seu skatista profissional preferido</h3>`
+    <h3>Veja nosso rank de skatistas profissionais mais votados</h3>`
 </script>
+
+<script>
+    const labels = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Rank skatistas',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [10, 13, 15, 20, 23, 30, 40],
+      }]
+    };
+  
+    const config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+  </script>
+
+<script>
+    const div_grafico = new Chart(
+      document.getElementById('div_grafico'),
+      config
+    );
+  </script>

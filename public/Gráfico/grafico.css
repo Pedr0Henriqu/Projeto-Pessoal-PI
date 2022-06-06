@@ -7,7 +7,7 @@
 .header{
     height: 100vh;
     width: 20vw;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 .header .foto{
@@ -84,6 +84,10 @@ li a{
     margin: auto;
 }
 
+.banner .card{
+    height: 100%;
+}
+
 .banner img{
     width: 80px;
     height: 80px;
@@ -115,7 +119,19 @@ li a{
     margin: 0;
 }
 
-.votacao{
-    margin-top: 50px;
-    height: 600px;
+.grafico{
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.retrato {
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
+    margin-right: 15px;
+    background-color: white;
+  }
