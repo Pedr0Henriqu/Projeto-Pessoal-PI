@@ -74,7 +74,7 @@ function login(){
 
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
+                sessionStorage.ID_USUARIO = json.idUsuario;
 
                 setTimeout(function () {
                     window.location.href = "../Minha conta/minhaconta.html";

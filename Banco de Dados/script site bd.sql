@@ -1,23 +1,37 @@
 create database skateboarding;
 use skateboarding;
 
-
 create table usuario(
-id int primary key auto_increment,
+idUsuario int primary key auto_increment,
 nome varchar(45),
 email varchar(45),
 senha varbinary(150)
 );
 
-select * from usuario;
+create table votacao(
+idVotacao int primary key auto_increment,
+modalidade varchar(45),
+skatista varchar(45),
+fkUsuario int, foreign key (fkUsuario) references usuario (idUsuario)
+);
 
+
+select * from usuario;
+select * from votacao;
+
+select count(idVotacao) AS 'QUANTIDADE', skatista from votacao where skatista = 'Luan de Oliveira';
+select count(idVotacao) AS 'QUANTIDADE', skatista from votacao where skatista = 'Nyjah Huston';
+select count(idVotacao) AS 'QUANTIDADE', skatista from votacao where skatista = 'Bob Burnquist';
+select count(idVotacao) AS 'QUANTIDADE', skatista from votacao where skatista = 'Tony Hawk';
+select count(idVotacao) AS 'QUANTIDADE', skatista from votacao where skatista = 'Rodney Mullen';
+
+select count(idVotacao), modalidade from votacao where modalidade = 'Downhill';
 
 -- insert into usuario (nome,email,senha) values
-            -- ('alex','alex@', aes_encrypt('12345', 'luanOliveira'));
+            -- ('alex','alex@12345', aes_encrypt('12345', 'luanOliveira'));
 
 -- SELECT * FROM usuario WHERE email = 'alex@sptech.school' AND senha = aes_encrypt('ñ ØjäàñusóÌÜÌ' , 'luanOliveira');
-
-insert into usuario values
+ insert into usuario values
 (null, 'pedro','pedro@sptech.school', aes_encrypt('12345', 'luanOliveira'));
 
 -- insert into usuario values

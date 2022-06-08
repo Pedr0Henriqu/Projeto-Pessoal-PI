@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="../css global/css global.css">
     <link rel="icon" href="../Imagens/title skate.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <script src="grafico.js"></script>
     <script src="../js/funcoes.js"></script>
+    <script src="../Minha conta/minhaconta.js"></script>
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Estatística</title>
 </head>
-<body>
+<body onload="listar_luan(), listar_nyjah(), listar_bob(), listar_tony(), listar_rodney(),
+       listar_street(), listar_downhill(), listar_freestyle(), listar_vertical(), listar_bowl()">
        <!-- Header -->
        <div class="conteudo">
         <div class="header"> 
@@ -60,6 +61,13 @@
                                   </div>
 
                             </div>
+                            <div class="retrato2">
+                              <div>
+                                <canvas id="div_grafico2"></canvas>
+                              </div>
+                            </div>
+
+                            
                         </div>
                     </div>
                 </div>
@@ -76,27 +84,38 @@
 </script>
 
 <script>
-    const labels = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
+     var votacao_luan = sessionStorage.getItem("luan")
+     var votacao_nyjah = sessionStorage.getItem("nyjah")
+     var votacao_bob = sessionStorage.getItem("bob")
+     var votacao_tony = sessionStorage.getItem("tony")
+     var votacao_rodney = sessionStorage.getItem("rodney")
+
+     var votacao_street = sessionStorage.getItem("street")
+     var votacao_downhill = sessionStorage.getItem("downhill")
+     var votacao_freestyle = sessionStorage.getItem("freestyle")
+     var votacao_vertical = sessionStorage.getItem("vertical")
+     var votacao_bowl = sessionStorage.getItem("bowl")
+
+     const labels = [
+      'Street',
+      'Downhill',
+      'FreeStyle',
+      'Vertical',
+      'Bowl',
     ];
   
     const data = {
       labels: labels,
       datasets: [{
-        label: 'Rank skatistas',
-        backgroundColor: 'rgb(255, 99, 132)',
+        label: 'Rank Modalidade',
+        backgroundColor: '#2a836b',
         borderColor: 'rgb(255, 99, 132)',
-        data: [10, 13, 15, 20, 23, 30, 40],
+        data: [votacao_street, votacao_downhill, votacao_freestyle, votacao_vertical, votacao_bowl, 50],
       }]
     };
   
     const config = {
-      type: 'line',
+      type: 'bar',
       data: data,
       options: {}
     };
@@ -106,5 +125,40 @@
     const div_grafico = new Chart(
       document.getElementById('div_grafico'),
       config
+    );
+  </script>
+
+  <!-- segundo -->
+
+  <script>
+    const labels2 = [
+      'Luan de Oliveira',
+      'Nyjah Huston',
+      'Bob Burnquist',
+      'Tony Hawk',
+      'Rodney Mullen',
+    ];
+  
+    const data2 = {
+      labels: labels2,
+      datasets: [{
+        label: 'Rank skatistas',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [votacao_luan, votacao_nyjah, votacao_bob, votacao_tony, votacao_rodney,50],
+      }]
+    };
+  
+    const config2 = {
+      type: 'bar',
+      data: data2,
+      options: {}
+    };
+  </script>
+
+<script>
+    const div_grafico2 = new Chart(
+      document.getElementById('div_grafico2'),
+      config2
     );
   </script>

@@ -3,8 +3,7 @@ html{
 }
 
 .imagem{
-    background-image:
-    url(../Imagens/teste2.jpg);
+    background-image:url(../Imagens/teste2.jpg);
     background-position-x: 100%;
     background-position-y: 100%;
     background-size: cover;

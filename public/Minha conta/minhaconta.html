@@ -48,11 +48,50 @@
 
                         <div id="titulo">
                             <h1>Bem vindo(a) Usuario</h1>
-                            <h3>Veja nosso rank de skatistas profissionais mais votados</h3>
+                            <h3>Vote no seu skatista e modalidade preferida</h3>
                         </div>
 
                         <div class="votacao">
+                            <div class="esquerdo">
+                                <img src="../Imagens/pista.jpg" alt="">
+                            </div>
 
+                            <div class="direito">
+                                <div class="titulo">
+                                    <img src="../Imagens/avatar.png" alt="">
+                                    <h1>Cadastre-se</h1>
+                                </div>
+
+                                <div class="inputs">
+                                    <h3>Modalidade</h3>
+                                        <select id="select_modalidade">
+                                            <option value="Street">Street</option>
+                                            <option value="Downhill">Downhill</option>
+                                            <option value="FreeStyle">FreeStyle</option>
+                                            <option value="Vertical">Vertical</option>
+                                            <option value="Bowl">Bowl</option>
+                                        </select>
+
+                                    <h3>Skatista</h3>
+                                        <select id="select_skatista">
+                                            <option value="Luan de Oliveira">Luan de Oliveira</option>
+                                            <option value="Nyjah Huston">Nyjah Huston</option>
+                                            <option value="Bob Burnquist">Bob Burnquist</option>
+                                            <option value="Tony Hawk">Tony Hawk</option>
+                                            <option value="Rodney Mullen">Rodney Mullen</option>
+                                        </select>
+                                </div>
+
+                                <div class="botao">
+                                    <button onclick="votacao()">Votar</button>
+                                </div>
+
+                                <div id="div_aguardar" class="loading-div">
+                                    <img src="../Imagens/Spinner-1.2s-118px.gif" id="loading-gif">
+                                </div>
+
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
