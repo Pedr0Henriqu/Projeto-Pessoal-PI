@@ -7,7 +7,7 @@
 .header{
     height: 100vh;
     width: 20vw;
-    border: 1px solid red;
+    border: 1px solid black;
 }
 
 .header .foto{
@@ -41,23 +41,32 @@
     height:50vh;
 }
 
-.navbar li{
-    margin: 5px;
+.botoes{
+    border: 1px solid black;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    display: flex;
+    height: 40px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
-li a{
-    color: black;
+.botoes:hover{
+    background-color: #000000;
+    color: white;
 }
-
-.navbar li a:hover{
-    border-bottom: 1px solid black;
-    }
 
 .sair{
     display: flex;
     align-items: center;
     list-style: none;
     justify-content: center;
+}
+
+.sair a{
+    color: black;
 }
 
 .sair li a:hover{
@@ -91,7 +100,7 @@ li a{
 
 .banner .logo{
     cursor: pointer;
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid black;
@@ -117,8 +126,8 @@ li a{
 
 .votacao{
     display: flex;
-    margin-top: 30px;
-    height: 65vh;
+    margin-top: 25px;
+    height: 70vh;
     box-shadow: 20px 20px 50px black ;
 }
 
@@ -163,19 +172,20 @@ li a{
     display: flex;
     height:25vh;
     flex-direction: column;
-    width: 30%;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 
+
 #select_modalidade {
+    font-size: 17px;
     color: #60666d;
-    height: 30px;
     width: 120px;
 }
 
 #select_skatista {
+    font-size: 17px;
     color: #60666d;
-    height: 30px;
     width: 120px;
 }
 
@@ -195,4 +205,9 @@ li a{
     background-color: #2a836b;
     border: 0px;
     cursor: pointer;
+}
+
+#div_aguardar img{
+    width: 50px;
+    height: 50px;
 }

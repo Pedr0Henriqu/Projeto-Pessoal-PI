@@ -29,9 +29,9 @@
 
 
                 <div class="navbar">
-                    <li><a href="../Minha conta/minhaconta.html">Perfil</a></li>
-                    <li><a href="">Estatística</a></li>
-                </div>
+                  <div class="botoes" onclick="perfil()">Perfil</div>
+                   <div class="botoes" onclick="estatisticas()">Estatística</div>
+               </div>
 
                 <div class="sair" onclick="limparSessao()">
                     <li><a href="../Login/login.html">Sair</li>
@@ -162,3 +162,13 @@
       config2
     );
   </script>
+
+<script>
+  function perfil(){
+      window.location.href = "../Minha conta/minhaconta.html"
+  }
+
+  function estatisticas(){
+      window.location = "grafico.html"
+  }
+</script>

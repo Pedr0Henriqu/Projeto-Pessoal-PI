@@ -26,8 +26,8 @@
 
 
                 <div class="navbar">
-                    <li><a href="minhaconta.html">Perfil</a></li>
-                    <li><a href="../Gráfico/grafico.html">Estatística</a></li>
+                   <div class="botoes" onclick="perfil()">Perfil</div>
+                    <div class="botoes" onclick="estatisticas()">Estatística</div>
                 </div>
 
                 <div class="sair" onclick="limparSessao()">
@@ -105,4 +105,14 @@
     username.innerHTML = usuario[0].toLocaleUpperCase() + usuario.substr(1); // esta formatado para a primeira letra ser Maiuscula
     titulo.innerHTML = `<h1>Bem vindo(a) ${ usuario[0].toLocaleUpperCase() + usuario.substr(1)}</h1>
     <h3>Vote no seu skatista profissional preferido</h3>`
+</script>
+
+<script>
+    function perfil(){
+        window.location = "minhaconta.html"
+    }
+
+    function estatisticas(){
+        window.location.href = "../Gráfico/grafico.html"
+    }
 </script>

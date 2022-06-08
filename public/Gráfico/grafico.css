@@ -41,23 +41,33 @@
     height:50vh;
 }
 
-.navbar li{
-    margin: 5px;
+.botoes{
+    border: 1px solid black;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    display: flex;
+    height: 40px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
-li a{
-    color: black;
+.botoes:hover{
+    background-color: #000000;
+    color: white;
 }
 
-.navbar li a:hover{
-    border-bottom: 1px solid black;
-    }
 
 .sair{
     display: flex;
     align-items: center;
     list-style: none;
     justify-content: center;
+}
+
+.sair li a{
+    color: black;
 }
 
 .sair li a:hover{
@@ -128,20 +138,18 @@ li a{
 
 .retrato {
     width: 50%;
-    height: 50%;
+
     border-radius: 5px;
     margin-bottom: 15px;
     box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
     margin-right: 15px;
     background-color: white;
-  }
+}
 
-  .retrato2{
-      width: 50%;
-      height: 50%;
-      border-radius: 5px;
-      margin-bottom: 15px;
-      box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
-      margin-right: 15px;
-      background-color: white;
-  }
+.retrato2{
+    width: 50%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);
+    margin-right: 15px;
+    background-color: white;}
