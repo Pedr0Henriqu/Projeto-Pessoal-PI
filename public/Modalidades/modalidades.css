@@ -84,18 +84,19 @@ p{
 }
 
 .modalidades{
-    border: 2px solid black;
+
     height: 20%;
     margin-bottom: 40px;
 }
 
 .card{
+    box-shadow: 20px 20px 50px black;
     display: flex;
     height: 100%;
 }
 
 .card .imagem{
-    border-right: 2px solid black;
+
     height: 100%;
     width: 30%;
 }
@@ -112,10 +113,10 @@ p{
 }
 
 .card .titulo{
+    padding-left: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    border-bottom: 2px solid black;
     height: 20%;
 }
 

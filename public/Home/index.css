@@ -152,7 +152,7 @@ button:hover{
 /* Inicio Banner 2 */
 
 .banner2{
-    height: 600px;
+    height: 500px;
 }
 
 .banner2 .container2{
@@ -164,7 +164,7 @@ button:hover{
 
 .card{
     display: flex;
-    height:70%;
+    height: 400px;
     border: 1px solid black;
 }
 

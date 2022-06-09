@@ -94,8 +94,17 @@
     margin: auto;
 }
 
-.banner .card{
-    height: 100%;
+.card{
+    height: 90vh;
+}
+
+.bem-vindo{
+    height: 150px;
+}
+
+.titulos{
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .banner img{
@@ -104,11 +113,10 @@
 }
 
 .banner .logo{
-    cursor: pointer;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    border-bottom: 1px solid black;
+    justify-content: center;
+    width: 30%;
 }
 
 .logo span{
@@ -118,15 +126,8 @@
 }
 
 .card #titulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     height: 15%;
-}
-
-#titulo h3{
-    margin: 0;
+    width: 70%;
 }
 
 .grafico{
@@ -138,7 +139,6 @@
 
 .retrato {
     width: 50%;
-
     border-radius: 5px;
     margin-bottom: 15px;
     box-shadow: 9px 7px 5px rgba(0, 0, 0, 0.205);

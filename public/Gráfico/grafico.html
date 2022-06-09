@@ -15,7 +15,7 @@
     <title>Estatística</title>
 </head>
 <body onload="listar_luan(), listar_nyjah(), listar_bob(), listar_tony(), listar_rodney(),
-       listar_street(), listar_downhill(), listar_freestyle(), listar_vertical(), listar_bowl()">
+       listar_street(), listar_downhill(), listar_freestyle(), listar_vertical(), listar_bowl(), validarSessao()">
        <!-- Header -->
        <div class="conteudo">
         <div class="header"> 
@@ -41,18 +41,23 @@
 
             <!-- Banner -->
             <div class="banner">
-                <div class="container">
-                    <div class="card">
+              <div class="container">
+                  <div class="card">
 
-                        <div onclick="" class="logo">
-                          <img src="../Imagens/icone skate.png"> 
-                          <span>SKATEBOARD</span>
-                        </div>
-
-                        <div id="titulo">
+                      <div class="bem-vindo">
+                          <div class="titulos">
+                           <div class="logo">
+                              <img src="../Imagens/icone skate.png"> 
+                              <span>SKATEBOARD</span>
+                          </div>
+  
+                          <div id="titulo">
                             <h1>Bem vindo(a) Usuario</h1>
-                            <h3>Veja nosso rank de skatistas profissionais mais votados</h3>
-                        </div>
+                            <h3>Veja nosso rank de skatistas profissionais e modalidades mais votadas </h3>
+                          </div>
+                          </div>
+
+                      </div>
 
                         <div class="grafico">
                             <div class="retrato">
@@ -80,7 +85,7 @@
     var usuario = sessionStorage.getItem('NOME_USUARIO')
     username.innerHTML = usuario[0].toLocaleUpperCase() + usuario.substr(1); // esta formatado para a primeira letra ser Maiuscula
     titulo.innerHTML = `<h1>Bem vindo(a) ${ usuario[0].toLocaleUpperCase() + usuario.substr(1)}</h1>
-    <h3>Veja nosso rank de skatistas profissionais mais votados</h3>`
+    <h3>Veja nosso rank de skatistas profissionais e modalidades mais votadas</h3>`
 </script>
 
 <script>

@@ -93,17 +93,26 @@
     margin: auto;
 }
 
+.bem-vindo{
+    height: 150px;
+}
+
+.titulos{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
 .banner img{
     width: 80px;
     height: 80px;
 }
 
 .banner .logo{
-    cursor: pointer;
-    display: none;
-    justify-content: flex-start;
+    display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
+    justify-content: center;
+    width: 30%;
 }
 
 .logo span{
@@ -113,16 +122,10 @@
 }
 
 .card #titulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     height: 15%;
+    width: 70%;
 }
 
-#titulo h3{
-    margin: 0;
-}
 
 .votacao{
     display: flex;
