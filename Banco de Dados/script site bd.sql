@@ -19,6 +19,9 @@ fkUsuario int, foreign key (fkUsuario) references usuario (idUsuario)
 select * from usuario;
 select * from votacao;
 
+ insert into usuario values
+(null, 'pedro henrique','pedro@sptech.school', aes_encrypt('12345', 'luanOliveira'));
+
 insert into votacao(modalidade , skatista, fkUsuario) values
 ('Bowl','Tony Hawk', 1);
 
@@ -47,12 +50,7 @@ select count(idVotacao), modalidade from votacao where modalidade = 'Downhill';
             -- ('alex','alex@12345', aes_encrypt('12345', 'luanOliveira'));
 
 -- SELECT * FROM usuario WHERE email = 'alex@sptech.school' AND senha = aes_encrypt('ñ ØjäàñusóÌÜÌ' , 'luanOliveira');
- insert into usuario values
-(null, 'pedro','pedro@sptech.school', aes_encrypt('12345', 'luanOliveira'));
 
-
-
-update usuario set nome = 'pedro henrique' where idUsuario = 1;
 
 -- insert into usuario values
 -- (null , 'Paulo', 'paulo.souza@sptech.school', md5('luanOliveira'));
