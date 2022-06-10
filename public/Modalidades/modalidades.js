@@ -11,17 +11,18 @@ function login(){
 function verificar(){
     var frase = ipt_frase.value;
     var contagem = 0;
-    lista.push(frase)
+    
 
     for(var i = 0; i < lista.length ; i++){
-        if(lista.length > 3){
+        if(lista.length > 2){
             contagem++
         }
     }
 
-    if(contagem > 0){
+    if(contagem > 2){
         alert("Apenas 3 modalidades!")
     }else{
+        lista.push(frase)
         texto.innerHTML = `
         Sua modalidade preferida é: ${lista[0]}
         <br>
